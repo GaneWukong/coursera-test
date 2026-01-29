@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Simple HTML for Beginners</title>
+    <style>
+        body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width:800px; margin:2rem auto; padding:0 1rem; color:#222; }
+        header { border-bottom:1px solid #ddd; padding-bottom:1rem; margin-bottom:1rem; }
+        img { max-width:100%; height:auto; display:block; }
+        button { padding:.4rem .8rem; cursor:pointer; }
+        footer { margin-top:2rem; border-top:1px solid #eee; padding-top:1rem; color:#555; font-size:.9rem; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to HTML</h1>
+        <p>A very small example to get started.</p>
+    </header>
+
+    <!-- Basic elements -->
+    <section>
+        <h2>Text and lists</h2>
+        <p>This is a paragraph. Use &lt;p&gt; for paragraphs.</p>
+        <ul>
+            <li>Unordered list item</li>
+            <li>Another item</li>
+        </ul>
+        <ol>
+            <li>First ordered item</li>
+            <li>Second ordered item</li>
+        </ol>
+    </section>
+
+    <!-- Link and image -->
+    <section>
+        <h2>Link and image</h2>
+        <p><a href="https://example.com" target="_blank" rel="noopener">Visit example.com</a></p>
+        <img src="https://via.placeholder.com/600x200.png?text=Placeholder+Image" alt="Placeholder">
+    </section>
+
+    <!-- Interactive button -->
+    <section>
+        <h2>Interactive button</h2>
+        <button id="greetBtn">Click me</button>
+    </section>
+
+    <!-- Simple form -->
+    <section>
+        <h2>Simple form</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Footer text — simple example for learning HTML.</p>
+    </footer>
+
+    <script>
+        // Show an alert when the button is clicked
+        document.getElementById('greetBtn').addEventListener('click', function () {
+            alert('Hello! You clicked the button.');
+        });
+
+        // Prevent form submission and show a message instead
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim() || 'Guest';
+            alert('Form submitted. Hello, ' + name + '!');
+        });
+    </script>
+</body>
+</html>
